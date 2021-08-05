@@ -1,0 +1,1466 @@
+/*%FSM<COMPILE "D:\Programme HDD\Steam HDD\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, MissionFlow">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"START",0,250,-75.000000,-500.000000,25.000000,-450.000000,0.000000,"START"};
+item1[] = {"vars_defined",4,218,-75.000000,675.000000,25.000000,725.000000,0.000000,"vars defined"};
+item2[] = {"create_Task",2,250,-75.000000,775.000000,25.000000,825.000000,0.000000,"create Task"};
+item3[] = {"distance_ship__2",4,218,-75.000000,900.000000,25.000000,950.000000,0.000000,"distance ship" \n "<200"};
+item4[] = {"destination_ship",2,4346,-75.000000,1000.000000,25.000000,1050.000000,0.000000,"destination" \n "ship"};
+item5[] = {"sling_load",4,218,50.000000,925.000000,150.000000,975.000000,0.000000,"sling load"};
+item6[] = {"destination_collection",2,250,200.000000,1000.000000,300.000000,1050.000000,0.000000,"destination" \n "collection" \n "point"};
+item7[] = {"no_sling_load",4,218,50.000000,1075.000000,150.000000,1125.000000,0.000000,"no sling" \n "load"};
+item8[] = {"all_collected",4,218,-325.000000,1175.000000,-225.000000,1225.000000,0.000000,"all" \n "collected"};
+item9[] = {"success",2,250,-325.000000,1300.000000,-225.000000,1350.000000,0.000000,"success"};
+item10[] = {"",7,210,746.000000,1421.000000,754.000000,1429.000000,0.000000,""};
+item11[] = {"END_Saved_All",1,250,-500.000000,1525.000000,-400.000000,1575.000000,0.000000,"END" \n "Saved+All"};
+item12[] = {"headgear",4,218,-75.000000,-400.000000,25.000000,-350.000000,0.000000,"headgear"};
+item13[] = {"get_in_task",2,250,-75.000000,-300.000000,25.000000,-250.000000,0.000000,"get in task"};
+item14[] = {"in_heli",4,218,-75.000000,-175.000000,25.000000,-125.000000,0.000000,"in heli"};
+item15[] = {"got_in_succ",2,250,-75.000000,-50.000000,25.000000,0.000000,0.000000,"got in succ"};
+item16[] = {"exited",4,218,-300.000000,-50.000000,-200.000000,0.000000,0.000000,"exited"};
+item17[] = {"reassign",2,250,-300.000000,-175.000000,-200.000000,-125.000000,0.000000,"reassign"};
+item18[] = {"sling_load_lost",4,218,350.000000,1075.000000,450.000000,1125.000000,1.000000,"sling load" \n "lost"};
+item19[] = {"destination_lost",2,250,500.000000,1000.000000,600.000000,1050.000000,0.000000,"destination" \n "lost cargo"};
+item20[] = {"picked_up",4,218,350.000000,925.000000,450.000000,975.000000,0.000000,"picked" \n "up"};
+item21[] = {"destroyed_or_und",4,218,350.000000,1175.000000,450.000000,1225.000000,0.000000,"destroyed or" \n "underwater"};
+item22[] = {"remove_from_cargo",2,250,200.000000,1175.000000,300.000000,1225.000000,0.000000,"remove from" \n "cargo array"};
+item23[] = {"_",8,218,50.000000,1175.000000,150.000000,1225.000000,0.000000,""};
+item24[] = {"success_1",2,250,-200.000000,1300.000000,-100.000000,1350.000000,0.000000,"success"};
+item25[] = {"heli_at_start",4,218,-200.000000,1400.000000,-100.000000,1450.000000,0.000000,"heli at" \n "start"};
+item26[] = {"END_Saved_Part",1,250,-500.000000,1675.000000,-400.000000,1725.000000,0.000000,"END" \n "Saved+Part"};
+item27[] = {"fail",2,250,-75.000000,1300.000000,25.000000,1350.000000,0.000000,"fail"};
+item28[] = {"saved_part",4,218,-350.000000,1675.000000,-250.000000,1725.000000,5.000000,"saved+part"};
+item29[] = {"some_collected",4,218,-200.000000,1175.000000,-100.000000,1225.000000,1.000000,"some" \n "collected"};
+item30[] = {"none_collected",4,218,-75.000000,1175.000000,25.000000,1225.000000,2.000000,"none" \n "collected"};
+item31[] = {"Rescue_set_up",4,218,-75.000000,50.000000,25.000000,100.000000,0.000000,"Rescue set" \n "up"};
+item32[] = {"add_comm_item_ta",2,250,-75.000000,150.000000,25.000000,200.000000,0.000000,"add comm item" \n "task"};
+item33[] = {"boat_near_drowni",4,218,-75.000000,250.000000,25.000000,300.000000,0.000000,"boat near" \n "drowning"};
+item34[] = {"succ",2,250,-75.000000,350.000000,25.000000,400.000000,0.000000,"succ"};
+item35[] = {"drowning_dead",4,218,125.000000,250.000000,225.000000,300.000000,0.000000,"drowning dead"};
+item36[] = {"fail_dead",2,250,125.000000,350.000000,225.000000,400.000000,0.000000,"fail dead"};
+item37[] = {"waves_to_high",4,218,-275.000000,250.000000,-175.000000,300.000000,0.000000,"waves to high"};
+item38[] = {"fail_waves",2,250,-275.000000,350.000000,-175.000000,400.000000,0.000000,"fail waves"};
+item39[] = {"weather_worsenin",4,218,-200.000000,900.000000,-100.000000,950.000000,0.000000,"weather worsening"};
+item40[] = {"cancel_rest__of",2,250,-325.000000,1000.000000,-225.000000,1050.000000,0.000000,"cancel rest" \n " of cargo"};
+item41[] = {"land_succ",2,250,-200.000000,1525.000000,-100.000000,1575.000000,0.000000,"land succ"};
+item42[] = {"saved_all",4,218,-350.000000,1525.000000,-250.000000,1575.000000,6.000000,"saved+all"};
+item43[] = {"END_Drowned_Part",1,250,-500.000000,1750.000000,-400.000000,1800.000000,0.000000,"END" \n "Drowned+Part"};
+item44[] = {"drowned_part",4,218,-350.000000,1750.000000,-250.000000,1800.000000,4.000000,"drowned+part"};
+item45[] = {"END_Saved_none",1,250,-500.000000,1825.000000,-400.000000,1875.000000,0.000000,"END" \n "Saved+none"};
+item46[] = {"saved_none",4,218,-350.000000,1825.000000,-250.000000,1875.000000,3.000000,"saved+none"};
+item47[] = {"END_drowned_none",1,250,-500.000000,1900.000000,-400.000000,1950.000000,0.000000,"END" \n "drowned+none"};
+item48[] = {"drowned_none",4,218,-350.000000,1900.000000,-250.000000,1950.000000,2.000000,"drowned+none"};
+item49[] = {"essential_part_h",4,218,-450.000000,775.000000,-350.000000,825.000000,100.000000,"essential" \n "part hit"};
+item50[] = {"emergency__landi",2,250,-625.000000,775.000000,-525.000000,825.000000,0.000000,"emergency " \n "landing"};
+item51[] = {"near_ground",4,218,-775.000000,775.000000,-675.000000,825.000000,0.000000,"near ground"};
+item52[] = {"",7,210,-404.000000,171.000015,-396.000000,178.999985,0.000000,""};
+item53[] = {"time_out",2,250,-950.000000,775.000000,-850.000000,825.000000,0.000000,"time out"};
+item54[] = {"player_alive",4,218,-1050.000000,875.000000,-950.000000,925.000000,0.000000,"player alive"};
+item55[] = {"player_dead",4,218,-850.000000,875.000000,-750.000000,925.000000,0.000000,"player dead"};
+item56[] = {"success_emergency",2,250,-1050.000000,1000.000000,-950.000000,1050.000000,0.000000,"success" \n "emergency" \n "landing"};
+item57[] = {"dead",1,250,-850.000000,1000.000000,-750.000000,1050.000000,0.000000,"dead"};
+item58[] = {"convo_done",4,218,-1050.000000,1125.000000,-950.000000,1175.000000,0.000000,"convo done"};
+item59[] = {"End_Emergency_La",1,250,-1050.000000,1250.000000,-950.000000,1300.000000,0.000000,"End" \n "Emergency" \n "Landing"};
+item60[] = {"non_essential_part",4,218,350.000000,775.000000,450.000000,825.000000,0.000000,"non essential" \n "part hit"};
+item61[] = {"convo",2,250,700.000000,775.000000,800.000000,825.000000,0.000000,"convo"};
+item62[] = {"convo_over",4,218,700.000000,900.000000,800.000000,950.000000,0.000000,"convo over"};
+item63[] = {"task_land",2,250,700.000000,1000.000000,800.000000,1050.000000,0.000000,"task land"};
+item64[] = {"END_Saved_All_1",1,250,-500.000000,1600.000000,-400.000000,1650.000000,0.000000,"END" \n "Saved+All"};
+item65[] = {"drowned_all",4,218,-350.000000,1600.000000,-250.000000,1650.000000,6.000000,"drowned+all"};
+link0[] = {0,12};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,39};
+link4[] = {2,49};
+link5[] = {2,60};
+link6[] = {3,4};
+link7[] = {4,5};
+link8[] = {4,8};
+link9[] = {4,29};
+link10[] = {4,30};
+link11[] = {4,39};
+link12[] = {4,49};
+link13[] = {4,60};
+link14[] = {5,6};
+link15[] = {6,7};
+link16[] = {6,8};
+link17[] = {6,18};
+link18[] = {6,29};
+link19[] = {6,30};
+link20[] = {6,49};
+link21[] = {6,60};
+link22[] = {7,4};
+link23[] = {8,9};
+link24[] = {9,25};
+link25[] = {9,49};
+link26[] = {10,25};
+link27[] = {12,13};
+link28[] = {13,14};
+link29[] = {14,15};
+link30[] = {15,16};
+link31[] = {15,31};
+link32[] = {16,17};
+link33[] = {17,14};
+link34[] = {18,19};
+link35[] = {19,20};
+link36[] = {19,21};
+link37[] = {19,49};
+link38[] = {19,60};
+link39[] = {20,6};
+link40[] = {21,22};
+link41[] = {22,8};
+link42[] = {22,23};
+link43[] = {22,29};
+link44[] = {22,30};
+link45[] = {23,4};
+link46[] = {24,25};
+link47[] = {24,49};
+link48[] = {25,41};
+link49[] = {27,25};
+link50[] = {27,49};
+link51[] = {28,26};
+link52[] = {29,24};
+link53[] = {30,27};
+link54[] = {31,32};
+link55[] = {32,33};
+link56[] = {32,35};
+link57[] = {32,37};
+link58[] = {32,52};
+link59[] = {32,60};
+link60[] = {33,34};
+link61[] = {34,1};
+link62[] = {35,36};
+link63[] = {36,1};
+link64[] = {37,38};
+link65[] = {38,1};
+link66[] = {39,40};
+link67[] = {40,8};
+link68[] = {40,29};
+link69[] = {40,30};
+link70[] = {41,28};
+link71[] = {41,42};
+link72[] = {41,44};
+link73[] = {41,46};
+link74[] = {41,48};
+link75[] = {41,65};
+link76[] = {42,11};
+link77[] = {44,43};
+link78[] = {46,45};
+link79[] = {48,47};
+link80[] = {49,50};
+link81[] = {50,51};
+link82[] = {51,53};
+link83[] = {52,49};
+link84[] = {53,54};
+link85[] = {53,55};
+link86[] = {54,56};
+link87[] = {55,57};
+link88[] = {56,58};
+link89[] = {58,59};
+link90[] = {60,61};
+link91[] = {61,49};
+link92[] = {61,62};
+link93[] = {62,63};
+link94[] = {63,10};
+link95[] = {63,49};
+link96[] = {65,64};
+globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-588.417053,820.158875,1268.674683,301.166382,1287,884,1};
+window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1305};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "MissionFlow";
+        class States
+        {
+                /*%FSM<STATE "START">*/
+                class START
+                {
+                        name = "START";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"//[player,""tsk_gear"","""",E_headset,""ASSIGNED"",101,true,""default""] call BIS_fnc_taskCreate;" \n
+                         "_initialCargoNumber = count AAS_cargoArray;" \n
+                         "C_heli lock true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "headgear">*/
+                                class headgear
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="get_in_task";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"tolower headgear player isequalto tolower ""H_PilotHelmetHeli_I"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "create_Task">*/
+                class create_Task
+                {
+                        name = "create_Task";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"//[group player,""tsk_cargo"","""",AAS_ship,""ASSIGNED"",100,true,""slingload""] call BIS_fnc_taskCreate;" \n
+                         "[player,_commID] call BIS_fnc_removeCommMenuItem;" \n
+                         "" \n
+                         "private _posAway = [" \n
+                         "    [[AAS_ship,3500]]," \n
+                         "    [""ground"",[AAS_ship,500]]," \n
+                         "    {abs (getTerrainHeightASL _this) < 20 && abs (getTerrainHeightASL _this) > 3}" \n
+                         "] call BIS_fnc_randomPos;" \n
+                         "_wpaway = group driver C_rescueBoat addWaypoint [_posAway,0];" \n
+                         "_wpaway setWaypointStatements [""true""," \n
+                         """{deleteVehicle _x} foreach attachedObjects C_rescueBoat;" \n
+                         "{deleteVehicle _x} foreach thisList;" \n
+                         "deleteVehicle C_rescueBoat;""];" \n
+                         "" \n
+                         "0 = [] spawn {sleep 10; savegame;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "weather_worsenin">*/
+                                class weather_worsenin
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="cancel_rest__of";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(waves+windstr+overcast)/3 > 0.8120" \n
+                                         "&& IsNull getslingload C_heli" \n
+                                         "//ca at 2000 hours sooner"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "non_essential_part">*/
+                                class non_essential_part
+                                {
+                                        itemno = 60;
+                                        priority = 0.000000;
+                                        to="convo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli gethitpointDamage ""hitwinch"" > 0.9" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.2" \n
+                                         "OR" \n
+                                         "missionNamespace getvariable [""AAS_playerCancelMission"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "distance_ship__2">*/
+                                class distance_ship__2
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="destination_ship";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"player distance AAS_ship < 200"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "destination_ship">*/
+                class destination_ship
+                {
+                        name = "destination_ship";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "[""tsk_cargo"", AAS_ship] call BIS_fnc_taskSetDestination;" \n
+                         "C_heliC vehicleRadio format [""nextcargo_%1"",ceil random 6];" \n
+                         "private _condSave = {_x distance2d AAS_collectionPoint < 25} count AAS_cargoArray >= _initialCargoNumber/2; " \n
+                         "If _condSave then {" \n
+                         "    0 = [] spawn {sleep 2; savegame;};" \n
+                         "};" \n
+                         "" \n
+                         "//[""CargoHook"", 15, """", 35, """", false, false, true, true] call BIS_fnc_advHint;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "none_collected">*/
+                                class none_collected
+                                {
+                                        itemno = 30;
+                                        priority = 2.000000;
+                                        to="fail";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == 0" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "some_collected">*/
+                                class some_collected
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="success_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray < _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "weather_worsenin">*/
+                                class weather_worsenin
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="cancel_rest__of";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(waves+windstr+overcast)/3 > 0.8120" \n
+                                         "&& IsNull getslingload C_heli" \n
+                                         "//ca at 2000 hours sooner"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "all_collected">*/
+                                class all_collected
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="success";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "non_essential_part">*/
+                                class non_essential_part
+                                {
+                                        itemno = 60;
+                                        priority = 0.000000;
+                                        to="convo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli gethitpointDamage ""hitwinch"" > 0.9" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.2" \n
+                                         "OR" \n
+                                         "missionNamespace getvariable [""AAS_playerCancelMission"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "sling_load">*/
+                                class sling_load
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="destination_collection";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "destination_collection">*/
+                class destination_collection
+                {
+                        name = "destination_collection";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_currentSlingload = getslingload C_heli;" \n
+                         "[""tsk_cargo"", AAS_collectionPoint] call BIS_fnc_taskSetDestination;" \n
+                         "C_heliC vehicleRadio format [""cargohooked_%1"",ceil random 6];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "none_collected">*/
+                                class none_collected
+                                {
+                                        itemno = 30;
+                                        priority = 2.000000;
+                                        to="fail";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == 0" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "some_collected">*/
+                                class some_collected
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="success_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray < _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "sling_load_lost">*/
+                                class sling_load_lost
+                                {
+                                        itemno = 18;
+                                        priority = 1.000000;
+                                        to="destination_lost";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"IsNull getslingload C_heli" \n
+                                         "&& _currentSlingload distance2d AAS_collectionPoint > 25"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "all_collected">*/
+                                class all_collected
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="success";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "non_essential_part">*/
+                                class non_essential_part
+                                {
+                                        itemno = 60;
+                                        priority = 0.000000;
+                                        to="convo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli gethitpointDamage ""hitwinch"" > 0.9" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.2" \n
+                                         "OR" \n
+                                         "missionNamespace getvariable [""AAS_playerCancelMission"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "no_sling_load">*/
+                                class no_sling_load
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="destination_ship";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "success">*/
+                class success
+                {
+                        name = "success";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_cargo"",""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
+                         "[player,""tsk_land"","""",[11579.4,11907.2,0],""ASSIGNED"",102,true,""land""] call BIS_fnc_taskCreate;" \n
+                         "player addscore (count AAS_cargoArray)*10;" \n
+                         "[independent,""AirBase""] sideradio ""goHome_all"";" \n
+                         "" \n
+                         "0 = [] spawn {sleep 10; savegame;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "heli_at_start">*/
+                                class heli_at_start
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="land_succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli distance [11579.4,11907.2,0] < 10" \n
+                                         "&& (getpos C_heli select 2) < 2" \n
+                                         "&& !IsEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_Saved_All">*/
+                class END_Saved_All
+                {
+                        name = "END_Saved_All";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"[""endSavedAll"",true] call BIS_fnc_endMission;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "get_in_task">*/
+                class get_in_task
+                {
+                        name = "get_in_task";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_gear"",""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
+                         "//[player,""tsk_getIn"","""",C_heli,""ASSIGNED"",102,true,""getIn""] call BIS_fnc_taskCreate;" \n
+                         "C_heli lock false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_heli">*/
+                                class in_heli
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="got_in_succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"player in C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "got_in_succ">*/
+                class got_in_succ
+                {
+                        name = "got_in_succ";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_getIn"",""SUCCEEDED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Rescue_set_up">*/
+                                class Rescue_set_up
+                                {
+                                        itemno = 31;
+                                        priority = 0.000000;
+                                        to="add_comm_item_ta";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"simulationenabled C_drowning" \n
+                                         "&& simulationEnabled C_rescueBoat" \n
+                                         "&& fuel c_heli > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "exited">*/
+                                class exited
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="reassign";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(player in C_heli)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "reassign">*/
+                class reassign
+                {
+                        name = "reassign";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_getIn"",""ASSIGNED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_heli">*/
+                                class in_heli
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="got_in_succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"player in C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "destination_lost">*/
+                class destination_lost
+                {
+                        name = "destination_lost";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_cargo"", _currentSlingload] call BIS_fnc_taskSetDestination;" \n
+                         "C_heliC vehicleRadio format [""cargoDropped_%1"",ceil random 3];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "destroyed_or_und">*/
+                                class destroyed_or_und
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="remove_from_cargo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _currentslingload" \n
+                                         "OR" \n
+                                         "getPosASL _currentslingload select 2 < 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "non_essential_part">*/
+                                class non_essential_part
+                                {
+                                        itemno = 60;
+                                        priority = 0.000000;
+                                        to="convo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli gethitpointDamage ""hitwinch"" > 0.9" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.2" \n
+                                         "OR" \n
+                                         "missionNamespace getvariable [""AAS_playerCancelMission"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "picked_up">*/
+                                class picked_up
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="destination_collection";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getslingload C_heli isequalto _currentSlingload"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "remove_from_cargo">*/
+                class remove_from_cargo
+                {
+                        name = "remove_from_cargo";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"_cargoindex = AAS_cargoArray find _currentslingload;" \n
+                         "AAS_cargoArray deleteAt _cargoindex;" \n
+                         "C_heliC vehicleRadio format [""cargoLost_%1"",ceil random 3];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "none_collected">*/
+                                class none_collected
+                                {
+                                        itemno = 30;
+                                        priority = 2.000000;
+                                        to="fail";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == 0" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "some_collected">*/
+                                class some_collected
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="success_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray < _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="destination_ship";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "all_collected">*/
+                                class all_collected
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="success";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "success_1">*/
+                class success_1
+                {
+                        name = "success_1";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_cargo"",""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
+                         "[player,""tsk_land"","""",[11579.4,11907.2,0],""ASSIGNED"",102,true,""land""] call BIS_fnc_taskCreate;" \n
+                         "player addscore (count AAS_cargoArray)*10;" \n
+                         "[independent,""AirBase""] sideradio ""goHome_some"";" \n
+                         "" \n
+                         "0 = [] spawn {sleep 10; savegame;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "heli_at_start">*/
+                                class heli_at_start
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="land_succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli distance [11579.4,11907.2,0] < 10" \n
+                                         "&& (getpos C_heli select 2) < 2" \n
+                                         "&& !IsEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_Saved_Part">*/
+                class END_Saved_Part
+                {
+                        name = "END_Saved_Part";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"[""endSavedPart"",true] call BIS_fnc_endMission;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fail">*/
+                class fail
+                {
+                        name = "fail";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_cargo"",""FAILED""] call BIS_fnc_taskSetState;" \n
+                         "[player,""tsk_land"","""",[11579.4,11907.2,0],""ASSIGNED"",102,true,""land""] call BIS_fnc_taskCreate;" \n
+                         "player addscore (count AAS_cargoArray)*10;" \n
+                         "[independent,""AirBase""] sideradio ""goHome_none"";" \n
+                         "" \n
+                         "0 = [] spawn {sleep 10; savegame;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "heli_at_start">*/
+                                class heli_at_start
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="land_succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli distance [11579.4,11907.2,0] < 10" \n
+                                         "&& (getpos C_heli select 2) < 2" \n
+                                         "&& !IsEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "add_comm_item_ta">*/
+                class add_comm_item_ta
+                {
+                        name = "add_comm_item_ta";
+                        itemno = 32;
+                        init = /*%FSM<STATEINIT""">*/"_commID = [player,""guiderescueBoat""] call BIS_fnc_addCommMenuItem;" \n
+                         "//[player,""tsk_rescue"","""",markerpos ""marker_areaDrowning"",""ASSIGNED"",102,true,""search""] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "waves_to_high">*/
+                                class waves_to_high
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="fail_waves";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"waves > 0.6934" \n
+                                         "//ca at 1940 hours"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "non_essential_part">*/
+                                class non_essential_part
+                                {
+                                        itemno = 60;
+                                        priority = 0.000000;
+                                        to="convo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli gethitpointDamage ""hitwinch"" > 0.9" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.2" \n
+                                         "OR" \n
+                                         "missionNamespace getvariable [""AAS_playerCancelMission"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "drowning_dead">*/
+                                class drowning_dead
+                                {
+                                        itemno = 35;
+                                        priority = 0.000000;
+                                        to="fail_dead";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive C_drowning"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "boat_near_drowni">*/
+                                class boat_near_drowni
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_rescueBoat distance C_drowning < 25"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "succ">*/
+                class succ
+                {
+                        name = "succ";
+                        itemno = 34;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_rescue"",""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
+                         "[independent, ""AirBase""] sideRadio ""drowning_found"";" \n
+                         "C_drowning moveInCargo C_rescueBoat;" \n
+                         "[C_drowning] join driver C_rescueBoat;" \n
+                         "AAS_drowningRescued = true;" \n
+                         "deleteVehicle chem;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vars_defined">*/
+                                class vars_defined
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="create_Task";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!IsNil ""AAS_cargoArray"" " \n
+                                         "&& !isNil ""AAS_collectionPoint""" \n
+                                         "&& !IsNil ""AAS_ship"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fail_dead">*/
+                class fail_dead
+                {
+                        name = "fail_dead";
+                        itemno = 36;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_rescue"",""FAILED""] call BIS_fnc_taskSetState;" \n
+                         "[independent, ""AirBase""] sideRadio ""drowning_dead"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vars_defined">*/
+                                class vars_defined
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="create_Task";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!IsNil ""AAS_cargoArray"" " \n
+                                         "&& !isNil ""AAS_collectionPoint""" \n
+                                         "&& !IsNil ""AAS_ship"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fail_waves">*/
+                class fail_waves
+                {
+                        name = "fail_waves";
+                        itemno = 38;
+                        init = /*%FSM<STATEINIT""">*/"C_drowning setOxygenRemaining 0;" \n
+                         "[""tsk_rescue"",""FAILED""] call BIS_fnc_taskSetState;" \n
+                         "[independent, ""AirBase""] sideRadio ""drowning_waves"";" \n
+                         "" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vars_defined">*/
+                                class vars_defined
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="create_Task";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!IsNil ""AAS_cargoArray"" " \n
+                                         "&& !isNil ""AAS_collectionPoint""" \n
+                                         "&& !IsNil ""AAS_ship"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "cancel_rest__of">*/
+                class cancel_rest__of
+                {
+                        name = "cancel_rest__of";
+                        itemno = 40;
+                        init = /*%FSM<STATEINIT""">*/"_cargoNotCollected = AAS_cargoArray select {_x distance2d AAS_collectionPoint > 25};" \n
+                         "AAS_cargoArray = AAS_cargoArray - _cargoNotCollected;" \n
+                         "[independent, ""AirBase""] sideRadio ""weather_cancel"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "none_collected">*/
+                                class none_collected
+                                {
+                                        itemno = 30;
+                                        priority = 2.000000;
+                                        to="fail";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == 0" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "some_collected">*/
+                                class some_collected
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="success_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray < _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "all_collected">*/
+                                class all_collected
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="success";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"AAS_cargoArray findIf {_x distance2d AAS_collectionPoint > 25} == -1" \n
+                                         "&& count AAS_cargoArray == _initialCargoNumber" \n
+                                         "&& IsNull getslingload C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "land_succ">*/
+                class land_succ
+                {
+                        name = "land_succ";
+                        itemno = 41;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_land"",""SUCCEEDED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "saved_all">*/
+                                class saved_all
+                                {
+                                        itemno = 42;
+                                        priority = 6.000000;
+                                        to="END_Saved_All";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"missionNamespace getvariable [""AAS_drowningRescued"",false]" \n
+                                         "&& count AAS_cargoArray == _initialCargoNumber"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "drowned_all">*/
+                                class drowned_all
+                                {
+                                        itemno = 65;
+                                        priority = 6.000000;
+                                        to="END_Saved_All_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(missionNamespace getvariable [""AAS_drowningRescued"",false])" \n
+                                         "&& count AAS_cargoArray == _initialCargoNumber"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "saved_part">*/
+                                class saved_part
+                                {
+                                        itemno = 28;
+                                        priority = 5.000000;
+                                        to="END_Saved_Part";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"missionNamespace getvariable [""AAS_drowningRescued"",false]" \n
+                                         "&& (count AAS_cargoArray < _initialCargoNumber && count AAS_cargoArray > 0)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "drowned_part">*/
+                                class drowned_part
+                                {
+                                        itemno = 44;
+                                        priority = 4.000000;
+                                        to="END_Drowned_Part";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(missionNamespace getvariable [""AAS_drowningRescued"",false])" \n
+                                         "&& (count AAS_cargoArray < _initialCargoNumber && count AAS_cargoArray > 0)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "saved_none">*/
+                                class saved_none
+                                {
+                                        itemno = 46;
+                                        priority = 3.000000;
+                                        to="END_Saved_none";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"missionNamespace getvariable [""AAS_drowningRescued"",false]" \n
+                                         "&& count AAS_cargoArray == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "drowned_none">*/
+                                class drowned_none
+                                {
+                                        itemno = 48;
+                                        priority = 2.000000;
+                                        to="END_drowned_none";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(missionNamespace getvariable [""AAS_drowningRescued"",false])" \n
+                                         "&& count AAS_cargoArray == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_Drowned_Part">*/
+                class END_Drowned_Part
+                {
+                        name = "END_Drowned_Part";
+                        itemno = 43;
+                        init = /*%FSM<STATEINIT""">*/"[""endDrownedPart"",true,true,false] call BIS_fnc_endMission;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_Saved_none">*/
+                class END_Saved_none
+                {
+                        name = "END_Saved_none";
+                        itemno = 45;
+                        init = /*%FSM<STATEINIT""">*/"[""endSavedNone"",true,true,false] call BIS_fnc_endMission;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_drowned_none">*/
+                class END_drowned_none
+                {
+                        name = "END_drowned_none";
+                        itemno = 47;
+                        init = /*%FSM<STATEINIT""">*/"[""endDrownedNone"",false] call BIS_fnc_endMission;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "emergency__landi">*/
+                class emergency__landi
+                {
+                        name = "emergency__landi";
+                        itemno = 50;
+                        init = /*%FSM<STATEINIT""">*/"player sidechat ""This is Echo, mayday mayday, we have suffered critical damage, attempting emergency landing!"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "near_ground">*/
+                                class near_ground
+                                {
+                                        itemno = 51;
+                                        priority = 0.000000;
+                                        to="time_out";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getpos c_heli select 2 < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "time_out">*/
+                class time_out
+                {
+                        name = "time_out";
+                        itemno = 53;
+                        init = /*%FSM<STATEINIT""">*/"_to = [] spawn {sleep 30;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "player_dead">*/
+                                class player_dead
+                                {
+                                        itemno = 55;
+                                        priority = 0.000000;
+                                        to="dead";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive player" \n
+                                         "&& scriptdone _to"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_alive">*/
+                                class player_alive
+                                {
+                                        itemno = 54;
+                                        priority = 0.000000;
+                                        to="success_emergency";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"alive player" \n
+                                         "&& scriptdone _to"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "success_emergency">*/
+                class success_emergency
+                {
+                        name = "success_emergency";
+                        itemno = 56;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "_convo = [] spawn {" \n
+                         "player sidechat ""This is Echo, emergency landing successfull, requesting medevac."";" \n
+                         "sleep 4;" \n
+                         "[independent,""AirBase""] sidechat ""Acknowledged Echo, sending medevac, sit tight."";" \n
+                         "sleep 5;" \n
+                         "c_heliC groupchat ""Holy shit captain, can't belive we survived this."";" \n
+                         "sleep 4;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "convo_done">*/
+                                class convo_done
+                                {
+                                        itemno = 58;
+                                        priority = 0.000000;
+                                        to="End_Emergency_La";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptdone _convo"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "dead">*/
+                class dead
+                {
+                        name = "dead";
+                        itemno = 57;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_Emergency_La">*/
+                class End_Emergency_La
+                {
+                        name = "End_Emergency_La";
+                        itemno = 59;
+                        init = /*%FSM<STATEINIT""">*/"[""endEmergencyLanding"",true,true,false,true] call BIS_fnc_endMission;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "convo">*/
+                class convo
+                {
+                        name = "convo";
+                        itemno = 61;
+                        init = /*%FSM<STATEINIT""">*/"_convo = [] spawn {" \n
+                         "player sidechat ""This is Echo, we have to return to base." \n
+                         " We can not continue on mission."";" \n
+                         "sleep 6;" \n
+                         "[independent, ""AirBase""] sidechat ""Copy that Echo, we'll have to call off the mission."";" \n
+                         "sleep 4;" \n
+                         "};" \n
+                         "_cargoNotCollected = AAS_cargoArray select {_x distance2d AAS_collectionPoint > 25};" \n
+                         "AAS_cargoArray = AAS_cargoArray - _cargoNotCollected;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "convo_over">*/
+                                class convo_over
+                                {
+                                        itemno = 62;
+                                        priority = 0.000000;
+                                        to="task_land";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptdone _convo"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "task_land">*/
+                class task_land
+                {
+                        name = "task_land";
+                        itemno = 63;
+                        init = /*%FSM<STATEINIT""">*/"[group player,""tsk_land"","""",[11579.4,11907.2,0],""ASSIGNED"",102,true,""land""] call BIS_fnc_taskCreate;" \n
+                         "If !(missionNamespace getvariable [""AAS_drowningRescued"",false]) then {" \n
+                         "C_drowning setOxygenRemaining 0;" \n
+                         "};" \n
+                         "" \n
+                         "0 = [] spawn {sleep 10; savegame;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "essential_part_h">*/
+                                class essential_part_h
+                                {
+                                        itemno = 49;
+                                        priority = 100.000000;
+                                        to="emergency__landi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"c_heli getHitPointDamage ""hitengine"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hithrotor"" >= 0.9" \n
+                                         "OR" \n
+                                         "c_heli gethitpointdamage ""hitvrotor"" > 0.5" \n
+                                         "OR" \n
+                                         "fuel c_heli < 0.05"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "heli_at_start">*/
+                                class heli_at_start
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="land_succ";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli distance [11579.4,11907.2,0] < 10" \n
+                                         "&& (getpos C_heli select 2) < 2" \n
+                                         "&& !IsEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_Saved_All_1">*/
+                class END_Saved_All_1
+                {
+                        name = "END_Saved_All_1";
+                        itemno = 64;
+                        init = /*%FSM<STATEINIT""">*/"[""endDrownedAll"",true] call BIS_fnc_endMission;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="START";
+        finalStates[] =
+        {
+                "END_Saved_All",
+                "END_Saved_Part",
+                "END_Drowned_Part",
+                "END_Saved_none",
+                "END_drowned_none",
+                "dead",
+                "End_Emergency_La",
+                "END_Saved_All_1",
+        };
+};
+/*%FSM</COMPILE>*/

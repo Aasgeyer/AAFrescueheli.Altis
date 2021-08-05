@@ -1,0 +1,132 @@
+class CfgFunctions
+{
+	class AAS
+	{
+		class spawning
+		{
+			class spawnShip {};
+			class marshall {};
+			class spawnDrowning {};
+			class interiorLight {};
+		};
+		class behaviour
+		{
+			class marshallMoves {ext = ".fsm";};
+			class rescueBoat {};
+		};
+		class presentation
+		{
+			class briefing {};
+		};
+	};
+};
+
+class CfgTaskTypes
+{
+	class slingload
+	{
+		icon	= "\a3\ui_f\data\IGUI\Cfg\VehicleToggles\SlingLoadRopeIconOn2_ca.paa";
+		icon3D	= "\a3\ui_f\data\IGUI\Cfg\VehicleToggles\SlingLoadRopeIconOn2_ca.paa";
+	};
+};
+
+class CfgTaskDescriptions
+{
+	class tsk_cargo
+	{
+		title		= "Secure Cargo";
+		description	= "A ship in distress has been evacuated but there remain hazardous substances on board. The crew was able to collect the cargo on the upper deck, ready to be sling loadad.";
+		marker		= "";
+	};
+	class tsk_gear
+	{
+		title		= "Take Helmet";
+		description	= "Take the pilot helmet on the table.";
+		marker		= "";
+	};
+	class tsk_getIn
+	{
+		title		= "Get In Helicopter";
+		description	= "Get in the helicopter at the landing pad.";
+		marker		= "";
+	};
+	class tsk_land
+	{
+		title		= "Land";
+		description	= "Land the helicopter on the landing pad.";
+		marker		= "";
+	};
+	class tsk_rescue
+	{
+		title		= "Rescue At Sea";
+		description	= "We have reports that one man went overboard. We suspect him in an area marked with an orange circle. Look from the air and give the position to the rescue team in a boat. (Use the communication menu (0-8-1))";
+		marker		= "";
+	};
+};
+
+#include "cfg\cfgRadio.inc"
+
+class CfgDebriefing
+{
+	// Used when all players die in MP
+	class endSavedAll
+	{
+		title = "Full Success";
+		description = "Very well done! You saved the life of the man over board. Additionally all cargo aboard the ship was evacuated and poses no threat to the environment nor to the populace.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\HoldActions\holdAction_requestLeadership_ca.paa";
+	};
+	class endDrownedAll
+	{
+		title = "Partial Success";
+		description = "Unfortunately the man overboard did not make it. Nevertheless all cargo was brought to the collection point thanks to you.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\HoldActions\holdAction_thumbsUp_ca.paa";
+	};
+
+	class endSavedPart
+	{
+		title = "Partial Success";
+		description = "Today you saved a life. Although not all cargo was secured, that which was secured poses not threat anymore.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\HoldActions\holdAction_thumbsUp_ca.paa";
+	};
+	class endDrownedPart
+	{
+		title = "Partial Success";
+		description = "It is unfortunate that we could not save the man that went over board. Not all cargo was secured, but that which was secured poses not threat anymore.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\HoldActions\holdAction_thumbsUp_ca.paa";
+	};
+	class endSavedNone
+	{
+		title = "Partial Success";
+		description = "While we managed to rescue the man that went overboard, not a single piece of cargo made it to the collection point.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\HoldActions\holdAction_thumbsUp_ca.paa";
+	};
+	
+	class endDrownedNone
+	{
+		title = "Full Failure";
+		description = "The man over board was lost at sea. Not a single load made it to the delivery point. We got to step up your training.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_cancel_ca.paa";
+	};
+	class endEmergencyLanding
+	{
+		title = "Emergency Landing";
+		description = "You have succesfully landed the helicopter after suffering critical damage. Well done.";
+		picture = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\land_ca.paa";
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class guideRescueBoat
+	{
+		text = "Report Position";		// Text displayed in the menu and in a notification
+		submenu = "";					// Submenu opened upon activation (expression is ignored when submenu is not empty.)
+		expression = "_this call AAS_fnc_rescueBoat;";	// Code executed upon activation
+		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";				// Icon displayed permanently next to the command menu
+		cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";				// Custom cursor displayed when the item is selected
+		enable = "cursorOnGround";					// Simple expression condition for enabling the item
+		removeAfterExpressionCall = 0;	// 1 to remove the item after calling
+	};
+};
+
+doneKeys[] = { "BIS_AAFrescueheli.Altis_done" };

@@ -1,0 +1,611 @@
+/*%FSM<COMPILE "D:\Programme HDD\Steam HDD\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Marshall">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"START",0,250,-75.000000,-375.000000,25.000000,-325.000000,0.000000,"START"};
+item1[] = {"in_heli",4,218,-75.000000,-50.000000,25.000000,0.000000,0.000000,"in heli"};
+item2[] = {"engine_on",2,250,-75.000000,50.000000,25.000000,100.000000,0.000000,"engine on"};
+item3[] = {"engine_on",4,218,-75.000000,150.000000,25.000000,200.000000,0.000000,"engine on"};
+item4[] = {"end_anim",2,250,75.000000,150.000000,175.000000,200.000000,0.000000,"end anim"};
+item5[] = {"lift_off",4,218,-75.000000,550.000000,25.000000,600.000000,0.000000,"lift off"};
+item6[] = {"anim_done",4,218,-75.000000,350.000000,25.000000,400.000000,0.000000,"anim done"};
+item7[] = {"away",4,218,75.000000,650.000000,175.000000,700.000000,0.000000,"away"};
+item8[] = {"stand_up",2,250,-75.000000,650.000000,25.000000,700.000000,0.000000,"stand up"};
+item9[] = {"back_again",4,218,-75.000000,775.000000,25.000000,825.000000,0.000000,"back again"};
+item10[] = {"slow",2,250,-75.000000,875.000000,25.000000,925.000000,0.000000,"slow"};
+item11[] = {"on_spot",4,218,-75.000000,1175.000000,25.000000,1225.000000,0.000000,"on spot"};
+item12[] = {"stop",2,250,-75.000000,1275.000000,25.000000,1325.000000,0.000000,"stop"};
+item13[] = {"stopped",4,218,-75.000000,1400.000000,25.000000,1450.000000,0.000000,"stopped"};
+item14[] = {"engine_off",2,250,-75.000000,1500.000000,25.000000,1550.000000,0.000000,"engine off"};
+item15[] = {"engine_off",4,218,-75.000000,1600.000000,25.000000,1650.000000,0.000000,"engine off"};
+item16[] = {"end",2,250,-75.000000,1700.000000,25.000000,1750.000000,0.000000,"end"};
+item17[] = {"anim_done",4,218,75.000000,250.000000,175.000000,300.000000,0.000000,"anim done"};
+item18[] = {"crouch",2,250,-75.000000,250.000000,25.000000,300.000000,0.000000,"crouch"};
+item19[] = {"thumbs_out",2,250,-75.000000,450.000000,25.000000,500.000000,0.000000,"thumbs out"};
+item20[] = {"end_anim_1",2,250,75.000000,550.000000,175.000000,600.000000,0.000000,"end anim"};
+item21[] = {"engine_on",4,218,-225.000000,250.000000,-125.000000,300.000000,0.000000,"engine on"};
+item22[] = {"",7,210,-179.000000,1720.999878,-171.000000,1729.000122,0.000000,""};
+item23[] = {"not_in_heli",4,218,-400.000000,1700.000000,-300.000000,1750.000000,0.000000,"not in heli"};
+item24[] = {"_",8,218,-75.000000,-250.000000,25.000000,-200.000000,0.000000,""};
+item25[] = {"__",2,250,-75.000000,-150.000000,25.000000,-100.000000,0.000000,"/"};
+item26[] = {"___1",2,250,-400.000000,50.000000,-300.000000,100.000000,0.000000,"/"};
+item27[] = {"in_heli_again",4,218,-225.000000,50.000000,-125.000000,100.000000,0.000000,"in heli" \n "again"};
+item28[] = {"checklist_1",2,250,100.000000,-50.000000,200.000000,0.000000,0.000000,"checklist 1"};
+item29[] = {"collision__lights",4,218,250.000000,-50.000000,350.000000,0.000000,1.000000,"collision " \n "lights on"};
+item30[] = {"checklist_2",2,250,400.000000,-50.000000,500.000000,0.000000,0.000000,"checklist 2"};
+item31[] = {"fueled",4,218,400.000000,50.000000,500.000000,100.000000,0.000000,"fueled"};
+item32[] = {"__0_sec_passed",4,218,100.000000,-175.000000,200.000000,-125.000000,0.000000,"10 sec passed"};
+item33[] = {"reminder",2,250,250.000000,-175.000000,350.000000,-125.000000,0.000000,"reminder"};
+item34[] = {"gear_not_down",4,218,75.000000,875.000000,175.000000,925.000000,1.000000,"gear not" \n "down"};
+item35[] = {"gear_reminder",2,250,75.000000,1175.000000,175.000000,1225.000000,0.000000,"gear reminder"};
+item36[] = {"gear_down",4,218,-75.000000,975.000000,25.000000,1025.000000,0.000000,"gear down"};
+item37[] = {"gear_checked",2,250,-75.000000,1075.000000,25.000000,1125.000000,0.000000,"gear checked"};
+link0[] = {0,24};
+link1[] = {1,28};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,17};
+link5[] = {5,20};
+link6[] = {6,19};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {9,10};
+link10[] = {10,34};
+link11[] = {10,36};
+link12[] = {11,12};
+link13[] = {12,13};
+link14[] = {13,14};
+link15[] = {14,15};
+link16[] = {15,16};
+link17[] = {16,22};
+link18[] = {17,18};
+link19[] = {18,6};
+link20[] = {19,5};
+link21[] = {20,7};
+link22[] = {21,18};
+link23[] = {22,21};
+link24[] = {22,23};
+link25[] = {23,26};
+link26[] = {24,25};
+link27[] = {25,1};
+link28[] = {26,27};
+link29[] = {27,2};
+link30[] = {28,29};
+link31[] = {28,32};
+link32[] = {29,30};
+link33[] = {30,31};
+link34[] = {31,2};
+link35[] = {32,33};
+link36[] = {33,29};
+link37[] = {34,35};
+link38[] = {35,11};
+link39[] = {36,37};
+link40[] = {37,11};
+globals[] = {0.000000,0,0,0,0,640,480,1,49,6316128,1,-508.083191,737.763916,1280.705688,387.494995,1233,884,1};
+window[] = {2,-1,-1,-1,-1,785,-1894,-454,26,3,1251};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Marshall";
+        class States
+        {
+                /*%FSM<STATE "START">*/
+                class START
+                {
+                        name = "START";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_marshall""];" \n
+                         "" \n
+                         "private _chemclass = ""Chemlight_green_Infinite"";" \n
+                         "" \n
+                         "private _leftchem = _chemclass createVehicle [0,0,0];" \n
+                         "_leftchem attachTo [_marshall,[0.0,0.0,0.0],""righthand""];" \n
+                         "" \n
+                         "private _rightchem = _chemclass createVehicle [0,0,0];" \n
+                         "_rightchem attachTo [_marshall,[0.0,0.0,0.0],""lefthand""];" \n
+                         "" \n
+                         "_marshall addEventHandler [""AnimDone"", {" \n
+                         "	params [""_marshall"", ""_anim""];" \n
+                         "	_marshall setVariable [""AnimDone_Ready"",true];" \n
+                         "}];" \n
+                         "" \n
+                         "C_heliC enableSimulation false;" \n
+                         "//C_heli lockTurret [[0],true];" \n
+                         "C_heli setfuel 0;" \n
+                         "" \n
+                         "" \n
+                         "//_marshall disableAI ""ANIM"";" \n
+                         "" \n
+                         "_debug = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="__";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "engine_on">*/
+                class engine_on
+                {
+                        name = "engine_on";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"//_marshall playMoveNow ""Acts_JetsMarshallingEnginesOn_in"";" \n
+                         "" \n
+                         "[_marshall,""switchMove"",""Acts_JetsMarshallingEnginesOn_in""] call bis_fnc_carrier01CrewPlayAnim;" \n
+                         "If (_debug) then {systemchat ""engine on"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "engine_on">*/
+                                class engine_on
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="end_anim";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "end_anim">*/
+                class end_anim
+                {
+                        name = "end_anim";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_marshall setVariable [""AnimDone_Ready"",false];" \n
+                         "_marshall playMove ""Acts_JetsMarshallingEnginesOn_out"";" \n
+                         "" \n
+                         "If (_debug) then {systemchat ""end anim"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "anim_done">*/
+                                class anim_done
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="crouch";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_marshall getVariable [""AnimDone_Ready"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "stand_up">*/
+                class stand_up
+                {
+                        name = "stand_up";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_marshall playMove ""Acts_JetsCrewaidFCrouch_out"";" \n
+                         "If (_debug) then {systemchat ""stand up"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "back_again">*/
+                                class back_again
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="slow";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_Heli distance [11579.4,11907.2,0] < 100"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "slow">*/
+                class slow
+                {
+                        name = "slow";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"//_marshall playMove ""Acts_JetsMarshallingSlow_loop"";" \n
+                         "[_marshall,""switchMove"",""Acts_JetsMarshallingSlow_in""] call bis_fnc_carrier01CrewPlayAnim;" \n
+                         "If (_debug) then {systemchat ""slow"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "gear_not_down">*/
+                                class gear_not_down
+                                {
+                                        itemno = 34;
+                                        priority = 1.000000;
+                                        to="gear_reminder";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli animationPhase ""frontgear"" > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "gear_down">*/
+                                class gear_down
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="gear_checked";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli animationPhase ""frontgear"" == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "stop">*/
+                class stop
+                {
+                        name = "stop";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"//_marshall playMove ""Acts_JetsMarshallingStop_loop"";" \n
+                         "[_marshall,""switchMove"",""Acts_JetsMarshallingStop_loop""] call bis_fnc_carrier01CrewPlayAnim;" \n
+                         "If (_debug) then {systemchat ""stop"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "stopped">*/
+                                class stopped
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="engine_off";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"abs speed C_heli < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "engine_off">*/
+                class engine_off
+                {
+                        name = "engine_off";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"//_marshall playMove ""Acts_JetsMarshallingEnginesOff_loop"";" \n
+                         "[_marshall,""switchMove"",""Acts_JetsMarshallingEnginesOff_loop""] call bis_fnc_carrier01CrewPlayAnim;" \n
+                         "If (_debug) then {systemchat ""engine off"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "engine_off">*/
+                                class engine_off
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="end";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!IsEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "end">*/
+                class end
+                {
+                        name = "end";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"//_marshall playMove ""Acts_JetsMarshallingEnginesOn_out"";" \n
+                         "[_marshall,""switchMove"",""Acts_JetsMarshallingEnginesOn_out""] call bis_fnc_carrier01CrewPlayAnim;" \n
+                         "If (_debug) then {systemchat ""end"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "not_in_heli">*/
+                                class not_in_heli
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="___1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(player in C_heli)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "engine_on">*/
+                                class engine_on
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="crouch";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isEngineOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "crouch">*/
+                class crouch
+                {
+                        name = "crouch";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"//_marshall playMoveNow ""Acts_JetsMarshallingClear_in"";" \n
+                         "_marshall setVariable [""AnimDone_Ready"",false];" \n
+                         "[_marshall,""switchMove"",""Acts_JetsCrewaidFCrouch_in""] call bis_fnc_carrier01CrewPlayAnim;" \n
+                         "If _debug then {systemchat ""crouch""};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "anim_done">*/
+                                class anim_done
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="thumbs_out";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_marshall getVariable [""AnimDone_Ready"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "thumbs_out">*/
+                class thumbs_out
+                {
+                        name = "thumbs_out";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"_marshall playMove ""Acts_JetsCrewaidFCrouchThumbup_in"";" \n
+                         "" \n
+                         "If (_debug) then {systemchat ""end anim"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "lift_off">*/
+                                class lift_off
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="end_anim_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getPosATL C_Heli select 2 > 5 OR abs speed C_heli > 15"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "end_anim_1">*/
+                class end_anim_1
+                {
+                        name = "end_anim_1";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"_marshall setVariable [""AnimDone_Ready"",false];" \n
+                         "_marshall playMove ""Acts_JetsCrewaidFCrouchThumbup_out"";" \n
+                         "" \n
+                         "If (_debug) then {systemchat ""end anim"";};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "away">*/
+                                class away
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="stand_up";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_Heli distance _marshall > 150" \n
+                                         "&& _marshall getVariable [""AnimDone_Ready"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__">*/
+                class __
+                {
+                        name = "__";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_heli">*/
+                                class in_heli
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="checklist_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"player in C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "___1">*/
+                class ___1
+                {
+                        name = "___1";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_heli_again">*/
+                                class in_heli_again
+                                {
+                                        itemno = 27;
+                                        priority = 0.000000;
+                                        to="engine_on";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"player in C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "checklist_1">*/
+                class checklist_1
+                {
+                        name = "checklist_1";
+                        itemno = 28;
+                        init = /*%FSM<STATEINIT""">*/"[C_heliC] joinSilent player;" \n
+                         "C_heliC enableSimulation true;" \n
+                         "_checklist = [] spawn {" \n
+                         "	C_heliC vehicleRadio ""playerInHeli"";" \n
+                         "	sleep 2;" \n
+                         "	C_heliC vehicleRadio ""CheckList_1"";" \n
+                         "	sleep 2;" \n
+                         "	C_heliC vehicleRadio ""CheckList_2"";" \n
+                         "	sleep 2;" \n
+                         "	C_heliC vehicleRadio ""CheckList_3"";" \n
+                         "	sleep 2;" \n
+                         "	C_heliC vehicleRadio ""CheckList_4"";" \n
+                         "	sleep 10;" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "collision__lights">*/
+                                class collision__lights
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="checklist_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isCollisionLightOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__0_sec_passed">*/
+                                class __0_sec_passed
+                                {
+                                        itemno = 32;
+                                        priority = 0.000000;
+                                        to="reminder";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptdone _checklist"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "checklist_2">*/
+                class checklist_2
+                {
+                        name = "checklist_2";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"0= [] spawn {" \n
+                         "	C_heliC vehicleRadio ""CheckList_5"";" \n
+                         "	sleep 2;" \n
+                         "	C_heliC vehicleRadio ""CheckList_6"";" \n
+                         " 	C_heli setfuel 1;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "fueled">*/
+                                class fueled
+                                {
+                                        itemno = 31;
+                                        priority = 0.000000;
+                                        to="engine_on";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"fuel C_heli > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "reminder">*/
+                class reminder
+                {
+                        name = "reminder";
+                        itemno = 33;
+                        init = /*%FSM<STATEINIT""">*/"C_heliC vehicleRadio ""CheckList_reminder"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "collision__lights">*/
+                                class collision__lights
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="checklist_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isCollisionLightOn C_heli"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "gear_reminder">*/
+                class gear_reminder
+                {
+                        name = "gear_reminder";
+                        itemno = 35;
+                        init = /*%FSM<STATEINIT""">*/"C_heliC vehicleradio ""Checklist_gearDown_reminder"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "on_spot">*/
+                                class on_spot
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli distance [11579.4,11907.2,0] < 10" \n
+                                         "&& (getpos C_heli select 2) < 5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "gear_checked">*/
+                class gear_checked
+                {
+                        name = "gear_checked";
+                        itemno = 37;
+                        init = /*%FSM<STATEINIT""">*/"C_heliC vehicleradio ""Checklist_gearDown"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "on_spot">*/
+                                class on_spot
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"C_heli distance [11579.4,11907.2,0] < 10" \n
+                                         "&& (getpos C_heli select 2) < 5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="START";
+        finalStates[] =
+        {
+        };
+};
+/*%FSM</COMPILE>*/
