@@ -5,7 +5,7 @@ item0[] = {"START",0,250,-75.000000,-500.000000,25.000000,-450.000000,0.000000,"
 item1[] = {"vars_defined",4,218,-75.000000,675.000000,25.000000,725.000000,0.000000,"vars defined"};
 item2[] = {"create_Task",2,250,-75.000000,775.000000,25.000000,825.000000,0.000000,"create Task"};
 item3[] = {"distance_ship__2",4,218,-75.000000,900.000000,25.000000,950.000000,0.000000,"distance ship" \n "<200"};
-item4[] = {"destination_ship",2,4346,-75.000000,1000.000000,25.000000,1050.000000,0.000000,"destination" \n "ship"};
+item4[] = {"destination_ship",2,250,-75.000000,1000.000000,25.000000,1050.000000,0.000000,"destination" \n "ship"};
 item5[] = {"sling_load",4,218,50.000000,925.000000,150.000000,975.000000,0.000000,"sling load"};
 item6[] = {"destination_collection",2,250,200.000000,1000.000000,300.000000,1050.000000,0.000000,"destination" \n "collection" \n "point"};
 item7[] = {"no_sling_load",4,218,50.000000,1075.000000,150.000000,1125.000000,0.000000,"no sling" \n "load"};
@@ -67,6 +67,8 @@ item62[] = {"convo_over",4,218,700.000000,900.000000,800.000000,950.000000,0.000
 item63[] = {"task_land",2,250,700.000000,1000.000000,800.000000,1050.000000,0.000000,"task land"};
 item64[] = {"END_Saved_All_1",1,250,-500.000000,1600.000000,-400.000000,1650.000000,0.000000,"END" \n "Saved+All"};
 item65[] = {"drowned_all",4,218,-350.000000,1600.000000,-250.000000,1650.000000,6.000000,"drowned+all"};
+item66[] = {"boat_died",4,218,275.000000,250.000000,375.000000,300.000000,0.000000,"boat died"};
+item67[] = {"cancel_task",2,250,275.000000,350.000000,375.000000,400.000000,0.000000,"cancel task"};
 link0[] = {0,12};
 link1[] = {1,2};
 link2[] = {2,3};
@@ -127,45 +129,48 @@ link56[] = {32,35};
 link57[] = {32,37};
 link58[] = {32,52};
 link59[] = {32,60};
-link60[] = {33,34};
-link61[] = {34,1};
-link62[] = {35,36};
-link63[] = {36,1};
-link64[] = {37,38};
-link65[] = {38,1};
-link66[] = {39,40};
-link67[] = {40,8};
-link68[] = {40,29};
-link69[] = {40,30};
-link70[] = {41,28};
-link71[] = {41,42};
-link72[] = {41,44};
-link73[] = {41,46};
-link74[] = {41,48};
-link75[] = {41,65};
-link76[] = {42,11};
-link77[] = {44,43};
-link78[] = {46,45};
-link79[] = {48,47};
-link80[] = {49,50};
-link81[] = {50,51};
-link82[] = {51,53};
-link83[] = {52,49};
-link84[] = {53,54};
-link85[] = {53,55};
-link86[] = {54,56};
-link87[] = {55,57};
-link88[] = {56,58};
-link89[] = {58,59};
-link90[] = {60,61};
-link91[] = {61,49};
-link92[] = {61,62};
-link93[] = {62,63};
-link94[] = {63,10};
-link95[] = {63,49};
-link96[] = {65,64};
-globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-588.417053,820.158875,1268.674683,301.166382,1287,884,1};
-window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1305};
+link60[] = {32,66};
+link61[] = {33,34};
+link62[] = {34,1};
+link63[] = {35,36};
+link64[] = {36,1};
+link65[] = {37,38};
+link66[] = {38,1};
+link67[] = {39,40};
+link68[] = {40,8};
+link69[] = {40,29};
+link70[] = {40,30};
+link71[] = {41,28};
+link72[] = {41,42};
+link73[] = {41,44};
+link74[] = {41,46};
+link75[] = {41,48};
+link76[] = {41,65};
+link77[] = {42,11};
+link78[] = {44,43};
+link79[] = {46,45};
+link80[] = {48,47};
+link81[] = {49,50};
+link82[] = {50,51};
+link83[] = {51,53};
+link84[] = {52,49};
+link85[] = {53,54};
+link86[] = {53,55};
+link87[] = {54,56};
+link88[] = {55,57};
+link89[] = {56,58};
+link90[] = {58,59};
+link91[] = {60,61};
+link92[] = {61,49};
+link93[] = {61,62};
+link94[] = {62,63};
+link95[] = {63,10};
+link96[] = {63,49};
+link97[] = {65,64};
+link98[] = {66,67};
+link99[] = {67,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,84,6316128,1,-472.790649,750.902466,845.830505,5.313843,1287,884,1};
+window[] = {2,-1,-1,-1,-1,811,52,1492,52,3,1305};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -940,6 +945,19 @@ class FSM
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
+                                /*%FSM<LINK "boat_died">*/
+                                class boat_died
+                                {
+                                        itemno = 66;
+                                        priority = 0.000000;
+                                        to="cancel_task";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive C_rescueboat)" \n
+                                         "OR" \n
+                                         "!(canMove C_rescueBoat)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "drowning_dead">*/
                                 class drowning_dead
                                 {
@@ -1446,6 +1464,33 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "cancel_task">*/
+                class cancel_task
+                {
+                        name = "cancel_task";
+                        itemno = 67;
+                        init = /*%FSM<STATEINIT""">*/"[""tsk_rescue"",""CANCELED""] call BIS_fnc_taskSetState;" \n
+                         "[independent, ""AirBase""] sideRadio ""drowning_boatdead"";" \n
+                         "C_drowning setOxygenRemaining 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vars_defined">*/
+                                class vars_defined
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="create_Task";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!IsNil ""AAS_cargoArray"" " \n
+                                         "&& !isNil ""AAS_collectionPoint""" \n
+                                         "&& !IsNil ""AAS_ship"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/

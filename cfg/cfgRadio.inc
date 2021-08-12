@@ -224,6 +224,12 @@ class CfgRadio
 		sound[]	= { "", db - 100, 1.0 }; // .wss implied
 		title	= "Man over board found and rescued! Well done Echo! Proceed to lift the cargo off the ship.";
 	};
+	class drowning_boatdead
+	{
+		name	= "drowning_boatdead";
+		sound[]	= { "", db - 100, 1.0 }; // .wss implied
+		title	= "Echo, we just lost contact to the boat team. We'll try to get another boat to the last known position. Meanwhile you carry on with the cargo evacuation. Base out.";
+	};
 
     //weather
 	class weather_cancel
